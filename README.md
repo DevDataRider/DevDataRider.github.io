@@ -6,7 +6,7 @@ This site highlights my technical skills, projects, and contact information in a
 ---
 
 ## 🚀 Live Site
-👉 https://RiderBravoDataEngineer.github.io
+👉 https://DevDataRider.github.io
 
 ---
 
