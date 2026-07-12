@@ -53,6 +53,10 @@
 					border: 0;
 					border-radius: _size(border-radius);
 					box-shadow: inset 0 0 0 1px transparent;
+					font-family: _font(family-fixed);
+					font-size: 0.85em;
+					letter-spacing: 0.03em;
+					text-transform: lowercase;
 
 					&:hover {
 						background-color: _palette(invert, border-bg);

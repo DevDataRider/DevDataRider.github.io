@@ -1,0 +1,94 @@
+///
+/// Badges / certifications marquee.
+///
+
+	/* Badge marquee */
+
+	.badge-marquee {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		margin: 0 0 _size(element-margin) 0;
+		@include vendor('mask-image', 'linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)');
+
+		.badge-track {
+			@include vendor('display', 'flex');
+			@include vendor('align-items', 'center');
+			width: max-content;
+			@include vendor('animation', 'badge-scroll 26s linear infinite');
+
+			&:hover {
+				animation-play-state: paused;
+			}
+		}
+
+		.badge-item {
+			@include vendor('display', 'flex');
+			@include vendor('flex-direction', 'column');
+			@include vendor('align-items', 'center');
+			@include vendor('flex', '0 0 auto');
+			width: 11em;
+			margin: 0 2em;
+
+			img {
+				width: 7em;
+				height: 7em;
+				object-fit: contain;
+				@include vendor('filter', 'drop-shadow(0 0 16px rgba(46,142,255,0.28))');
+				@include vendor('transition', 'transform 0.3s ease');
+			}
+
+			&:hover img {
+				@include vendor('transform', 'scale(1.06)');
+			}
+
+			.badge-label {
+				display: block;
+				margin-top: 0.85em;
+				font-family: _font(family-fixed);
+				font-size: 0.75em;
+				letter-spacing: 0.03em;
+				text-align: center;
+			}
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.badge-track {
+				@include vendor('animation', 'none !important');
+				@include vendor('flex-wrap', 'wrap');
+				@include vendor('justify-content', 'center');
+				width: 100%;
+			}
+
+			.badge-item[aria-hidden="true"] {
+				display: none;
+			}
+		}
+
+		body.is-preload & {
+			.badge-track {
+				@include vendor('animation', 'none !important');
+			}
+		}
+	}
+
+	@include keyframes('badge-scroll') {
+		0% {
+			@include vendor('transform', 'translateX(0)');
+		}
+		100% {
+			@include vendor('transform', 'translateX(-50%)');
+		}
+	}
+
+	@mixin color-badges($p: null) {
+		.badge-marquee {
+			.badge-item {
+				.badge-label {
+					color: _palette($p, fg-light);
+				}
+			}
+		}
+	}
+
+	@include color-badges;

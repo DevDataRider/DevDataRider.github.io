@@ -1,0 +1,89 @@
+///
+/// Projects grid (generic.html) — all-projects listing.
+///
+
+	#content {
+		h2 {
+			text-align: center;
+		}
+	}
+
+	.back-container {
+		text-align: center;
+		margin-bottom: 0;
+	}
+
+	.back-button {
+		display: inline-block;
+		margin: 25px auto;
+	}
+
+	.projects-grid {
+		@include vendor('display', 'flex');
+		@include vendor('flex-wrap', 'wrap');
+		@include vendor('justify-content', 'center');
+		gap: 2em;
+		margin-top: 2em;
+	}
+
+	.project-card {
+		@include vendor('display', 'flex');
+		@include vendor('flex-direction', 'column');
+		@include vendor('align-items', 'center');
+		@include vendor('flex', '1 1 45%');
+		max-width: 500px;
+		padding: 2em;
+		border-radius: _size(border-radius-main);
+		border: solid 1px _palette(invert, border);
+		background-color: _palette(invert, bg-alt);
+		text-align: center;
+		overflow: hidden;
+		box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+		@include vendor('transition', 'transform 0.3s ease, box-shadow 0.3s ease');
+
+		&:hover {
+			@include vendor('transform', 'translateY(-5px)');
+			box-shadow: 0 16px 34px rgba(46,142,255,0.18);
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			border-radius: _size(border-radius-main);
+			margin-bottom: 1em;
+		}
+
+		.actions {
+			margin-top: auto;
+			@include vendor('display', 'flex');
+			@include vendor('justify-content', 'center');
+			@include vendor('flex-wrap', 'wrap');
+			gap: 10px;
+			padding: 0;
+
+			li a.button:hover {
+				color: _palette(accent) !important;
+			}
+		}
+	}
+
+	.pagination {
+		text-align: center;
+		margin-top: 3em;
+
+		.button {
+			margin: 0 5px;
+		}
+	}
+
+	@include breakpoint('<=medium') {
+		.project-card {
+			@include vendor('flex', '1 1 100%');
+		}
+	}
+
+	@include breakpoint('<=small') {
+		.projects-grid {
+			gap: 1.5em;
+		}
+	}

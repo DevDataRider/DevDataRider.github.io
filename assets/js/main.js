@@ -8,6 +8,9 @@
 		$body = $('body'),
 		$main = $('#main');
 
+	// Always start at the top on reload/navigation, regardless of previous scroll position.
+	window.scrollTo(0, 0);
+
 	// Breakpoints.
 	breakpoints({
 		xlarge:   [ '1281px',  '1680px' ],
@@ -20,9 +23,16 @@
 
 	// Play initial animations on page load.
 	$window.on('load', function() {
+		window.scrollTo(0, 0);
 		window.setTimeout(function() {
 			$body.removeClass('is-preload');
 		}, 100);
+	});
+
+	// Also reset scroll when the page is restored from the back/forward cache.
+	window.addEventListener('pageshow', function(event) {
+		if (event.persisted)
+			window.scrollTo(0, 0);
 	});
 
 	// ==========================================
