@@ -17,6 +17,7 @@ This portfolio was designed to present my profile as a **Data Engineering studen
 - 👨‍💻 About Me section  
 - 🚀 Featured Projects with detailed pages  
 - 🛠️ Technical Skills  
+- 🏅 Certifications  
 - 📬 Contact information  
 
 ---
@@ -58,6 +59,13 @@ Each project includes:
 - Azure  
 - ETL Processes  
 - Git & GitHub  
+
+---
+
+### 🏅 Certifications
+
+- Microsoft Certified: **Azure Data Fundamentals (DP-900)**  
+- **Databricks Fundamentals**
 
 ---
 
