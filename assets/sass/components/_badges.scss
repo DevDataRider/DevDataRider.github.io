@@ -29,6 +29,13 @@
 			@include vendor('flex', '0 0 auto');
 			width: 11em;
 			margin: 0 2em;
+			text-decoration: none;
+			border-bottom: none;
+			cursor: pointer;
+
+			&:hover {
+				border-bottom: none;
+			}
 
 			img {
 				width: 7em;

@@ -1736,14 +1736,14 @@ input[type=reset].primary:hover,
 input[type=button].primary:hover,
 button.primary:hover,
 .button.primary:hover {
-  background-color: rgb(61.3, 150.2722488038, 255);
+  background-color: rgb(24.0392156863%, 58.9302936486%, 100%);
 }
 input[type=submit].primary:active,
 input[type=reset].primary:active,
 input[type=button].primary:active,
 button.primary:active,
 .button.primary:active {
-  background-color: rgb(30.7, 133.7277511962, 255);
+  background-color: rgb(12.0392156863%, 52.442255371%, 100%);
 }
 input[type=submit].primary.icon:before,
 input[type=reset].primary.icon:before,
@@ -2727,6 +2727,12 @@ table.alt tbody tr td {
   flex: 0 0 auto;
   width: 11em;
   margin: 0 2em;
+  text-decoration: none;
+  border-bottom: none;
+  cursor: pointer;
+}
+.badge-marquee .badge-item:hover {
+  border-bottom: none;
 }
 .badge-marquee .badge-item img {
   width: 7em;
@@ -3300,14 +3306,14 @@ body.is-preload #header.alt .logo {
 #main input[type=button].primary:hover,
 #main button.primary:hover,
 #main .button.primary:hover {
-  background-color: rgb(61.3, 150.2722488038, 255);
+  background-color: rgb(24.0392156863%, 58.9302936486%, 100%);
 }
 #main input[type=submit].primary:active,
 #main input[type=reset].primary:active,
 #main input[type=button].primary:active,
 #main button.primary:active,
 #main .button.primary:active {
-  background-color: rgb(30.7, 133.7277511962, 255);
+  background-color: rgb(12.0392156863%, 52.442255371%, 100%);
 }
 #main input[type=submit].primary.icon:before,
 #main input[type=reset].primary.icon:before,
