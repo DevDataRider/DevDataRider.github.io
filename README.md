@@ -66,6 +66,9 @@ Each project includes:
 
 - Microsoft Certified: **Azure Data Fundamentals (DP-900)**  
 - **Databricks Fundamentals**
+- **Databricks AI Agent Fundamentals**
+- **Databricks Analytics Fundamentals**
+- **Databricks Lakehouse Architecture Fundamentals**
 
 ---
 
