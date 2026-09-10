@@ -8,3 +8,6 @@ desktop.ini
 # Node (por si acaso)
 node_modules/
 CLAUDE.md
+
+# Claude Code local config
+.claude/
